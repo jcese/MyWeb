@@ -1,0 +1,32 @@
+<!DOCTYPE html>  
+<html xmlns:th="http://www.thymeleaf.org">  
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
+<title>zoo list</title>  
+</head>  
+<body>  
+    <br><br>  
+        <div th:text="${MSG}">这里是信息提示.</div>  
+    <br>  
+        <div th:errors="${manaagerForm.name}"></div>  
+        <div th:errors="${manaagerForm.pass}"></div>  
+        <div th:errors="${manaagerForm.phone}"></div>  
+    <br>  
+    <form id="iform" >  
+        <table border="1">    
+          <tr>   
+            <th>名字</th>    
+            <th>密码</th>   
+            <th>电话</th>  
+            <th>Action</th>  
+          </tr>    
+          <tr>   
+            <td><input type="text" name="name" value="" th:value="*{name}"/></td>  
+            <td><input type="text" name="pass" value="" th:value="*{pass}"/></td>  
+            <td><input type="text" name="phone" value="" th:value="*{phone}"/></td>  
+            <td><input type="submit" value="添加"/></td>  
+          </tr>  
+        </table>  
+    </form>   
+</body>  
+</html>  
